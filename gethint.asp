@@ -1,7 +1,7 @@
 <%
 response.expires=-1
 dim a(30)
-'用名字来填充数组
+'Fill up array with names
 a(1)="Anna"
 a(2)="Brittany"
 a(3)="Cinderella"
@@ -33,10 +33,10 @@ a(28)="Ellen"
 a(29)="Wenche"
 a(30)="Vicky"
 
-'获得来自 URL 的 q 参数
+'get the q parameter from URL
 q=ucase(request.querystring("q"))
 
-'如果 q 大于 0，则查找数组中的所有提示
+'lookup all hints from array if length of q>0
 if len(q)>0 then
   hint=""
   for i=1 to 30
@@ -50,8 +50,8 @@ if len(q)>0 then
   next
 end if
 
-'如果未找到提示，则输出 "no suggestion"
-'否则输出正确的值
+'Output "no suggestion" if no hint were found
+'or output the correct values
 if hint="" then
   response.write("no suggestion")
 else
