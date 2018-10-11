@@ -9,7 +9,7 @@ function loadXMLDoc() {
         }
         console.log(xhttp.readyState + " " + xhttp.status);
     }
-    var url = "https://drive.google.com/file/d/1l9JY4cEWFCyD3CthZBbvyieyvO2pDlup/view?usp=sharing"
+    var url = "test123.txt"
     xhttp.open("GET", url, true);
     xhttp.send();
     // document.getElementById("demo").innerHTML = xhttp.responseText;
